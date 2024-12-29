@@ -1,0 +1,21 @@
+services:
+  florestad:
+    image: dlsz/floresta:0.6.0
+    command:
+      /usr/local/bin/florestad --rpc-address 0.0.0.0:8332
+    ports:
+      - "8332:8332"
+    volumes:
+      - ./florestad:/root/.floresta
+
+  web-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - FLORESTAD_URL=http://florestad:8332
+    depends_on:
+      - florestad
+
