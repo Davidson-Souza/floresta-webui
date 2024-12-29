@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floresta Blockchain UI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container" id="blockchain-info">
+    <center>
+      <h1>Blockchain Info</h1>
+    </center>
+    <div id="loading-spinner-blockchain-info" class="spinner"></div>
+    <div id="blockchain-info-data">
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <div class="container" id="node-info">
+    <center>
+      <h1>Node Info</h1>
+    </center>
+    <div id="loading-spinner-nodeinfo" class="spinner"></div>
+    <div id="node-info-data">
+      <p>Loading peers...</p>
+    </div>
+  </div>
+
+  <div class="wallet-button">
+    <button id="wallet-button">💼</button>
+  </div>
+
+  <div class="theme-toggle" >
+    <label>
+      <input type="checkbox" id="theme-switch">
+      <span class="moon-icon">🌙</span>
+    </label>
+  </div>
+
+  <div id="wallet-frame" class="hidden-frame">
+    <div class="frame-content">
+      <h2>Load Wallet Descriptor</h2>
+      <input type="text" id="descriptor-input" placeholder="Enter wallet descriptor">
+      <button id="send-button">Send</button>
+    </div>
+  </div>
+
+  <div id="message-box" class="hidden-message-box">
+    <div class="message-content">
+      <span id="status-icon">X</span>
+      <p id="message-text">Text</p>
+      <button id="close-message-button">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
